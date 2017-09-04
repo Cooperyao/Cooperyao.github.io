@@ -8,6 +8,11 @@ ul{
 a{
     text-decoration: none;
 }
+hr{
+    opacity: 0;
+    height: 100px;
+}
+/* 全局 */
 .main{
     width:100%;
     height: 3600px;
@@ -73,11 +78,6 @@ h2{
     background-color: white;
     font-size: 15px;
 }
-#floor2{
-    width: 100%;
-    height: 800px;
-    
-}
 nav{
     width:100%;
     height: 50px;
@@ -102,6 +102,7 @@ nav ul li a{
     height: 50px;
     color: white;
 }
+/* floor1 */
 #floor2{
     height: 800px;
 }
@@ -122,6 +123,7 @@ nav ul li a{
     -moz-transform:rotate(30deg); 	/* Firefox */
     -webkit-transform:rotate(30deg); /* Safari 和 Chrome */
     -o-transform:rotate(30deg);
+    box-shadow: 10px 10px 5px #888888;
 }
 .floor2_pho #pho2 {
     width: 200px;
@@ -131,6 +133,7 @@ nav ul li a{
     -moz-transform:rotate(-30deg); 	/* Firefox */
     -webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
     -o-transform:rotate(-30deg);   
+    box-shadow: 10px 10px 5px #888888;
 }
 .floor2_pho #pho3 {
     width: 200px;
@@ -139,10 +142,11 @@ nav ul li a{
     -ms-transform:rotate(20deg); 	/* IE 9 */
     -moz-transform:rotate(20deg); 	/* Firefox */
     -webkit-transform:rotate(20deg); /* Safari 和 Chrome */
-    -o-transform:rotate(20deg);   
+    -o-transform:rotate(20deg);  
+    box-shadow: 10px 10px 5px #888888; 
 }
 .floor2_right{
-    padding: 160px 0;
+    padding: 50px 0;
     width:400px;
     float: right;
     margin: 50px 50px;
@@ -150,7 +154,7 @@ nav ul li a{
 h3{
     text-align: center;
     font-size: 30px;
-    margin: 20px;
+    padding: 20px;
 }
 .floor2_right p{
     margin: 5px;
@@ -175,13 +179,9 @@ h3{
     background-color: black;
     color:white;
 }
-.floor3{
-    width: 100%;
-    height: 800px;
-}
-hr{
-    opacity: 0;
-    height: 100px;
+/* floor3 */
+#floor3{
+    height: 700px;
 }
 .floor3_container{
     height: 250px; 
@@ -200,4 +200,48 @@ hr{
     width: 100px;
     height: auto;
     margin: 20px;
+}
+.part:hover{
+    background-color: peru;
+    color: white;
+}
+/* floor4 */
+.floor4_container{
+    margin: 0 200px;
+    height: 600px;
+}
+.floor4_intro{
+    width: 400px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: gray;
+}
+.outbox{
+    float: left;
+    padding: 30px;
+    position: relative;
+}
+.cover_box{
+    position: absolute;
+    top:40%;
+    left: -2%;
+    width: 100%;
+    display: none;
+}
+h4{
+    text-align: center;
+    color:white;
+}
+.floor4_container > div .imgbox img{
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s ease;
+}
+.floor4_container > div:hover .cover_box{
+    display: block;
+}
+.floor4_container > div:hover .imgbox img{
+    filter:brightness(0.4);
+    transform: scale(1.3);
 }
