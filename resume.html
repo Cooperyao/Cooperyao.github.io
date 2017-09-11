@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="resume.css"/>
+    <title>我的简历</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="resume.js"></script>
+    <link type="text/css" rel="stylesheet" href="resume.css" />
 </head>
+
 <body>
     <div class="main">
-        <div class="floor" id="floor1">
+        <section class="floor" id="floor1">
             <div class="floor1_container">
                 <h1>Hello,I'm Cooper Yao</h1>
                 <h2><strong>一个执着的攻城狮。</strong></h2>
@@ -22,8 +26,8 @@
                 <img src="images/3.jpg" alt="">
                 <img src="images/4.jpg" alt="">
             </div>
-        </div>
-        <div class="floor" id="floor2">
+        </section>
+        <section class="floor" id="floor2">
             <nav>
                 <ul>
                     <li><a href="#floor2">关于我</a></li>
@@ -34,9 +38,9 @@
                 </ul>
             </nav>
             <div class="floor2_pho">
-                <img id="pho3"src="images/7.jpg" alt="">
-                <img id="pho1"src="images/5.jpg" alt="">
-                <img id="pho2"src="images/6.jpg" alt="">
+                <img id="pho3" src="images/7.jpg" alt="">
+                <img id="pho1" src="images/5.jpg" alt="">
+                <img id="pho2" src="images/6.jpg" alt="">
             </div>
             <div class="floor2_right">
                 <h3>关于我</h3>
@@ -46,111 +50,130 @@
                 <p>我喜欢研究所碰到的各种技术，不给自己设边界，有探索精神。</p>
                 <p>有时间概念，能在约定时间内保证完成任务。</p>
                 <ul>
-                    <li><a href="http://www.cnblogs.com/yzhweb/">blog</a></li>
-                    <li><a href="https://github.com/309318267">github</a></li>
+                    <li>
+                        <img src="icons/blog.png" alt="">
+                        <a href="http://www.cnblogs.com/yzhweb/">blog</a>
+                    </li>
+                    <li>
+                            <img src="icons/git.png" alt="">
+                        <a href="https://github.com/309318267">github</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-        <div class="floor" id="floor3">
+        </section>
+        <section class="floor" id="floor3">
             <h3>求职意向</h3>
             <p class="floor3_intro">希望有个展示自己的舞台。</p>
             <hr>
             <div class="floor3_container">
                 <div class="part">
                     <p><img src="icons/html.png" alt=""></p>
-                    <p>熟悉W3C标准，熟练运用html</p> 
-                    <p>保证页面兼容性。</p>  
+                    <p>熟悉W3C标准，熟练运用html</p>
+                    <p>保证页面兼容性。</p>
                 </div>
                 <div class="part">
-                    <p><img src="icons/css3.png" alt=""></p>   
-                    <p>有良好的代码风格</p> 
-                    <p>可读性、维护性、扩展性、复用性</p>  
+                    <p><img src="icons/css3.png" alt=""></p>
+                    <p>有良好的代码风格</p>
+                    <p>可读性、维护性、扩展性、复用性</p>
                 </div>
                 <div class="part">
-                    <p><img src="icons/jquery.png" alt=""></p> 
-                    <p>用jQuery完成常见的前端功能特效</p> 
-                    <p>用AJAX读取后台数据。</p>      
+                    <p><img src="icons/jquery.png" alt=""></p>
+                    <p>用jQuery完成常见的前端功能特效</p>
+                    <p>用AJAX读取后台数据。</p>
                 </div>
             </div>
-        </div>
-        <div class="floor" id="floor4">
+        </section>
+        <section class="floor" id="floor4">
             <h3>我的作品</h3>
             <p class="floor4_intro">清晰的思路，规范的格式，丰富的展现。</p>
+            <p class="floor4_intro">前端三大准则：动手，动手，谨记前面两项。</p>
             <hr>
             <div class="floor4_container">
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/表单.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/测试.jpg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>测试类页面</h4>
+                                <p>通过AJAX获取后台数据，记录并反馈数据获取结果</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/文本.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/列表.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>列表类页面</h4>
+                                <p>轮播，锚点导航，动画导航等</p>
+                                <p>jquery实现动态效果</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/动画.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box"> 
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/图片特效.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>图片特效类页面</h4>
+                                <p>放大镜，遮罩层，滤镜</p>
+                                <p>css3+jquery实现</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/问卷.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/表单.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>表单类页面</h4>
+                                <p>用户账号注册</p>
+                                <p>密码验证，邮箱格式，用户协议</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/图片.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/移动端.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>移动端页面</h4>
+                                <p>列表页，兼容ios android pad</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/官网.jpeg" alt="">
-                    </div>
-                    <a href="#">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/官网.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>官网类首页</h4>
+                                <p>模仿个大官网首页</p>
+                                <p>bootstrap框架实现</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="outbox">
-                    <div class="imgbox">
-                        <img src="icons/博客.jpeg" alt="">
-                    </div>
-                    <a href="http://www.cnblogs.com/yzhweb/">
-                        <div class="cover_box">
-                            <h4>表单类</h4>
+                <div class="bgbox">
+                    <img src="images/我的博客.jpeg" alt="">
+                    <div class="cover_box">
+                        <div class="cover_text">
+                            <a href="http://www.cnblogs.com/yzhweb/">
+                                <h4>我的博客</h4>
+                                <p>平时日积月累的知识</p>
+                                <p>自写各种DEMO效果代码分享</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-        </div> 
-        <div class="floor" id="floor5">
+        </section>
+        <section class="floor" id="floor5">
             <h3>技能水平</h3>
             <p class="floor5_intro">前端的发展日新月异，奔跑吧兄弟！</p>
             <hr>
@@ -166,42 +189,42 @@
                 </div>
                 <div class="circle_html">
                     <div class="circle left">
-                         <div class="circlein cssleft"></div>
+                        <div class="circlein cssleft"></div>
                     </div>
-                        <div class="circle right">
-                            <div class="circlein cssright"></div>
-                        </div>
+                    <div class="circle right">
+                        <div class="circlein cssright"></div>
+                    </div>
                     <div class="circle_num"><span>70%</span></div>
-                    </div>
+                </div>
                 <div class="circle_html">
                     <div class="circle left">
                         <div class="circlein cssleft"></div>
                     </div>
-                        <div class="circle right">
-                            <div class="circlein cssright"></div>
-                        </div>
+                    <div class="circle right">
+                        <div class="circlein cssright"></div>
+                    </div>
                     <div class="circle_num"><span>70%</span></div>
                 </div>
                 <div class="circle_html">
                     <div class="circle left">
                         <div class="circlein jqueryleft"></div>
                     </div>
-                        <div class="circle right">
-                            <div class="circlein jqueryright"></div>
-                        </div>
+                    <div class="circle right">
+                        <div class="circlein jqueryright"></div>
+                    </div>
                     <div class="circle_num"><span>80%</span></div>
                 </div>
             </div>
             <div class="object">
-                    <ul>
-                        <li>html</li>
-                        <li>css</li>
-                        <li>javascript</li>
-                        <li>jquery</li>
-                    </ul>
-                </div>
-        </div>
-        <div class="floor" id="floor6">
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                    <li>jquery</li>
+                </ul>
+            </div>
+        </section>
+        <section class="floor" id="floor6">
             <h3>我的经历</h3>
             <hr>
             <div class="floor6_container">
@@ -209,7 +232,10 @@
                     <div class="school">
                         <strong>广东海洋大学</strong>
                         <p class="ptitle">大学本科</p>
-                        <p>获得大学英语六级</p>
+                        <p class="ptitle">电气工程及其自动化</p>
+                        <p>C语言基础</p>
+                        <p>大学英语六级</p>
+
                     </div>
                     <div class="date">
                         <div></div>
@@ -221,7 +247,7 @@
                 <hr>
                 <div class="floor6_box2">
                     <div class="job">
-                        <strong>广东海洋大学</strong>
+                        <strong>广东肇庆供电局</strong>
                         <p class="ptitle">设备部／助理工程师</p>
                         <p>配网方向运维，年度月度计划安排。</p>
                         <p>gis系统维护，无人机巡视。</p>
@@ -234,7 +260,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
+
 </html>
