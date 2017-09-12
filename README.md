@@ -4,9 +4,10 @@
 2.导航条触发fixed效果;<br>
 3.滚动条触发导航高亮; <br>
 4.导航条显示当前位置高亮； <br>  
-## 9/12/2017
+## 9/12/2017优化滚动条触发导航高亮代码
 ```javascript
-        var alist = $("nav").find("a");
+        //原始代码
+        var alist = $("nav").find("a");
         if(scrollH >= 600 && scrollH <= 1400){
             $(alist).eq(0)
             .addClass("active").parent()
@@ -35,4 +36,15 @@
         else{
             $(alist).removeClass();
         }
+```
+```javascript
+        var nowFloor = Math.floor((scrollH-600)/800);
+        if(scrollH <= 600){
+            $(alist).removeClass();
+        }else{
+            $(alist).eq(nowFloor)
+            .addClass("active").parent()
+            .siblings().children().removeClass();
+        }
+        //优化后
 ```
