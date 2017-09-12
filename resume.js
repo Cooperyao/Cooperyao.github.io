@@ -14,7 +14,9 @@ $(function(){
     autoPlay();
     // 封面轮播动画
     $(window).scroll(function(){
-        var scrollH= $(document).scrollTop();
+        var scrollH = $(document).scrollTop();
+        var alist = $("nav").find("a");
+        var nowFloor = Math.floor((scrollH-600)/800);
         if(scrollH >= 800){
             $("nav").css({
                 "position":"fixed",
@@ -27,34 +29,12 @@ $(function(){
             })
         }
         // 导航条触发fixed效果
-        var alist = $("nav").find("a");
-        if(scrollH >= 600 && scrollH <= 1400){
-            $(alist).eq(0)
-            .addClass("active").parent()
-            .siblings().children().removeClass();
-        }
-        else if(scrollH >= 1400 && scrollH <= 2200){
-            $(alist).eq(1)
-            .addClass("active").parent()
-            .siblings().children().removeClass();
-        }
-        else if(scrollH >= 2200 && scrollH <= 3000){
-            $(alist).eq(2)
-            .addClass("active").parent()
-            .siblings().children().removeClass();
-        }
-        else if(scrollH >= 3000 && scrollH <= 3800){
-            $(alist).eq(3)
-            .addClass("active").parent()
-            .siblings().children().removeClass();
-        }
-        else if(scrollH >= 3800 && scrollH <= 4600){
-            $(alist).eq(4)
-            .addClass("active").parent()
-            .siblings().children().removeClass();
-        }
-        else{
+        if(scrollH <= 600){
             $(alist).removeClass();
+        }else{
+            $(alist).eq(nowFloor)
+            .addClass("active").parent()
+            .siblings().children().removeClass();
         }
         // 滚动条触发导航高亮
     })
