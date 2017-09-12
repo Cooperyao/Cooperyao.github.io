@@ -7,7 +7,8 @@
 ## 9/12/2017优化滚动条触发导航高亮代码
 ```javascript
         //原始代码
-        var alist = $("nav").find("a");
+        var scrollH = $(document).scrollTop();
+        var alist = $("nav").find("a");
         if(scrollH >= 600 && scrollH <= 1400){
             $(alist).eq(0)
             .addClass("active").parent()
@@ -38,6 +39,8 @@
         }
 ```
 ```javascript
+        var scrollH = $(document).scrollTop();
+        var alist = $("nav").find("a");
         var nowFloor = Math.floor((scrollH-600)/800);
         if(scrollH <= 600){
             $(alist).removeClass();
