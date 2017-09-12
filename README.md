@@ -5,7 +5,7 @@
 3.滚动条触发导航高亮; <br>
 4.导航条显示当前位置高亮； <br>  
 ## 9/12/2017
-···
+```javascript
         var alist = $("nav").find("a");
         if(scrollH >= 600 && scrollH <= 1400){
             $(alist).eq(0)
@@ -35,4 +35,4 @@
         else{
             $(alist).removeClass();
         }
-···
+```
