@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的简历</title>
-    <script src="jquery-3.2.1.js"></script>
-    <script src="resume.js"></script>
-    <link type="text/css" rel="stylesheet" href="resume.css" />
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="resume.css">
 </head>
 
 <body>
     <div class="main">
         <section class="floor" id="floor1">
-            <div class="floor1_container">
+            <div class="myIntro">
                 <h1>Hello,I'm Cooper Yao</h1>
                 <h2><strong>一个执着的攻城狮。</strong></h2>
-                <button class="left_btn"><a href="#floor2">About me</a></button>
-                <button class="right_btn"><a href="#floor4">My projects</a></button>
+                <button class="btn btn-info btn-striped"><a href="#floor2">About me</a></button>
+                <button class="btn btn-primary"><a href="#floor4">My projects</a></button>
             </div>
             <div class="floor1_bg">
                 <img src="images/1.jpg" class="current" alt="">
@@ -28,79 +27,96 @@
             </div>
         </section>
         <section class="floor" id="floor2">
-            <nav>
-                <ul>
-                    <li><a href="#floor2">关于我</a></li>
-                    <li><a href="#floor3">求职意向</a></li>
-                    <li><a href="#floor4">我的作品</a></li>
-                    <li><a href="#floor5">技能水平</a></li>
-                    <li><a href="#floor6">工作经历</a></li>
-                </ul>
-            </nav>
-            <div class="floor2_pho">
-                <img id="pho3" src="images/7.jpg" alt="">
-                <img id="pho1" src="images/5.jpg" alt="">
-                <img id="pho2" src="images/6.jpg" alt="">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+
+                    <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                     </button>
+                    <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+                    <span href="##" class="navbar-brand">Cooper Yao's work</span>
+                </div>
+                <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse col-md-offset-4">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#floor2">关于我</a></li>
+                        <li><a href="#floor3">求职意向</a></li>
+                        <li><a href="#floor4">我的作品</a></li>
+                        <li><a href="#floor5">技能水平</a></li>
+                        <li><a href="#floor6">工作经历</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="floor2_right">
-                <h3>关于我</h3>
-                <hr>
+            <h3>关于我</h3>
+            <hr>
+            <div class="floor2_pho col-md-12 col-xs-12">
+                <p class="text-center">
+                    <img id="pho1" src="images/6.jpg" alt="">
+                </p>
+            </div>
+            <div class="floor2_footer text-center col-md-12">
                 <p>我叫姚智豪，坐标广州，希望能成为一个攻城狮。</p>
                 <p>我是一个性格幽默，实事求是，自我要求高的人。</p>
                 <p>我喜欢研究所碰到的各种技术，不给自己设边界，有探索精神。</p>
                 <p>有时间概念，能在约定时间内保证完成任务。</p>
-                <ul>
-                    <li>
-                        <img src="icons/blog.png" alt="">
-                        <a href="http://www.cnblogs.com/yzhweb/">blog</a>
-                    </li>
-                    <li>
-                            <img src="icons/git.png" alt="">
-                        <a href="https://github.com/309318267">github</a>
-                    </li>
-                </ul>
+                <p>
+                    <img src="icons/blog.png" alt="">
+                    <a href="http://www.cnblogs.com/yzhweb/">blog</a>
+                    <img src="icons/git.png" alt="">
+                    <a href="https://github.com/309318267">github</a>
+                </p>
+
             </div>
         </section>
         <section class="floor" id="floor3">
             <h3>求职意向</h3>
-            <p class="floor3_intro">希望有个展示自己的舞台。</p>
+            <p class="intro text-center">希望有个展示自己的舞台。</p>
             <hr>
-            <div class="floor3_container">
-                <div class="part">
+            <div class="container">
+                <div class="part col-md-3 col-xs-6">
                     <p><img src="icons/html.png" alt=""></p>
                     <p>熟悉W3C标准，熟练运用html</p>
                     <p>保证页面兼容性。</p>
                 </div>
-                <div class="part">
+                <div class="part col-md-3 col-xs-6">
                     <p><img src="icons/css3.png" alt=""></p>
                     <p>有良好的代码风格</p>
                     <p>可读性、维护性、扩展性、复用性</p>
                 </div>
-                <div class="part">
+                <div class="part col-md-3 col-xs-6">
                     <p><img src="icons/jquery.png" alt=""></p>
                     <p>用jQuery完成常见的前端功能特效</p>
                     <p>用AJAX读取后台数据。</p>
+                </div>
+                <div class="part col-md-3 col-xs-6">
+                    <p><img src="icons/移动端.png" alt=""></p>
+                    <p>响应式界面</p>
+                    <p>兼容PC／平板／手机</p>
                 </div>
             </div>
         </section>
         <section class="floor" id="floor4">
             <h3>我的作品</h3>
-            <p class="floor4_intro">清晰的思路，规范的格式，丰富的展现。</p>
-            <p class="floor4_intro">前端三大准则：动手，动手，谨记前面两项。</p>
+            <p class="intro text-center">清晰的思路，规范的格式，丰富的展现。</p>
+            <p class="intro text-center">前端三大准则：动手，动手，谨记前面两项。</p>
             <hr>
-            <div class="floor4_container">
-                <div class="bgbox">
-                    <img src="images/测试.jpg" alt="">
+            <div class="container">
+                <div class="bgbox col-md-3 col-xs-6">
+                    <img src="images/测试.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
                             <a href="http://www.cnblogs.com/yzhweb/">
                                 <h4>测试类页面</h4>
-                                <p>通过AJAX获取后台数据，记录并反馈数据获取结果</p>
+                                <p>通过AJAX获取后台数据,</p>
+                                <p>记录并反馈数据获取结果</p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox col-md-3 col-xs-6">
                     <img src="images/列表.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -112,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox col-md-3 col-xs-6">
                     <img src="images/图片特效.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -124,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox col-md-3 col-xs-6">
                     <img src="images/表单.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -136,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox  col-md-3 col-xs-6">
                     <img src="images/移动端.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -147,7 +163,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox col-md-3 col-xs-6">
                     <img src="images/官网.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -159,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bgbox">
+                <div class="bgbox col-md-3 col-xs-6">
                     <img src="images/我的博客.jpeg" alt="">
                     <div class="cover_box">
                         <div class="cover_text">
@@ -174,86 +190,90 @@
             </div>
         </section>
         <section class="floor" id="floor5">
-            <h3>技能水平</h3>
-            <p class="floor5_intro">前端的发展日新月异，奔跑吧兄弟！</p>
             <hr>
-            <div class="floor5_container">
-                <div class="circle_html">
-                    <div class="circle left">
-                        <div class="circlein inleft"></div>
+            <h3>技能水平</h3>
+            <p class="intro text-center">前端的发展日新月异，奔跑吧兄弟！</p>
+            <hr>
+            <hr>
+            <div class="container">
+                <div class="circle_html col-md-3 col-xs-6">
+                    <div class="outerCircle">
+                        <div class="circle left">
+                            <div class="circlein inleft"></div>
+                        </div>
+                        <div class="circle right">
+                            <div class="circlein inright"></div>
+                        </div>
+                        <div class="circle_num"><span>75%</span></div>
+                        <div class="object  text-center"><span>html</span></div>
                     </div>
-                    <div class="circle right">
-                        <div class="circlein inright"></div>
-                    </div>
-                    <div class="circle_num"><span>75%</span></div>
                 </div>
-                <div class="circle_html">
-                    <div class="circle left">
-                        <div class="circlein cssleft"></div>
+                <div class="circle_html col-md-3 col-xs-6">
+                    <div class="outerCircle">
+                        <div class="circle left">
+                            <div class="circlein cssleft"></div>
+                        </div>
+                        <div class="circle right">
+                            <div class="circlein cssright"></div>
+                        </div>
+                        <div class="circle_num"><span>70%</span></div>
+                        <div class="object  text-center"><span>css</span></div>
                     </div>
-                    <div class="circle right">
-                        <div class="circlein cssright"></div>
-                    </div>
-                    <div class="circle_num"><span>70%</span></div>
                 </div>
-                <div class="circle_html">
-                    <div class="circle left">
-                        <div class="circlein cssleft"></div>
+                <div class="circle_html col-md-3 col-xs-6">
+                    <div class="outerCircle">
+                        <div class="circle left">
+                            <div class="circlein cssleft"></div>
+                        </div>
+                        <div class="circle right">
+                            <div class="circlein cssright"></div>
+                        </div>
+                        <div class="circle_num"><span>70%</span></div>
+                        <div class="object  text-center"><span>javascript</span></div>
                     </div>
-                    <div class="circle right">
-                        <div class="circlein cssright"></div>
-                    </div>
-                    <div class="circle_num"><span>70%</span></div>
                 </div>
-                <div class="circle_html">
-                    <div class="circle left">
-                        <div class="circlein jqueryleft"></div>
+                <div class="circle_html col-md-3 col-xs-6">
+                    <div class="outerCircle">
+                        <div class="circle left">
+                            <div class="circlein jqueryleft"></div>
+                        </div>
+                        <div class="circle right">
+                            <div class="circlein jqueryright"></div>
+                        </div>
+                        <div class="circle_num"><span>80%</span></div>
+                        <div class="object text-center"><span>jQuery</span></div>
                     </div>
-                    <div class="circle right">
-                        <div class="circlein jqueryright"></div>
-                    </div>
-                    <div class="circle_num"><span>80%</span></div>
                 </div>
-            </div>
-            <div class="object">
-                <ul>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>javascript</li>
-                    <li>jquery</li>
-                </ul>
             </div>
         </section>
         <section class="floor" id="floor6">
+            <hr>
             <h3>我的经历</h3>
             <hr>
-            <div class="floor6_container">
-                <div class="floor6_box1">
-                    <div class="school">
-                        <strong>广东海洋大学</strong>
+            <hr>
+            <div class="container">
+                <div class="school_box">
+                    <div class="school col-md-2  col-md-offset-3 col-xs-6">
+                        <p><strong>广东海洋大学</strong></p>
                         <p class="ptitle">大学本科</p>
                         <p class="ptitle">电气工程及其自动化</p>
                         <p>C语言基础</p>
                         <p>大学英语六级</p>
-
                     </div>
-                    <div class="date">
-                        <div></div>
+                    <div class="date col-md-3 col-xs-6">
                         <p>7/2010</p>
                         <p>-</p>
                         <p>6/2014</p>
                     </div>
                 </div>
-                <hr>
-                <div class="floor6_box2">
-                    <div class="job">
-                        <strong>广东肇庆供电局</strong>
+                <div class="job_box col-xs-6">
+                    <div class="job col-md-3 col-md-push-7 col-xs-6">
+                        <p><strong>广东肇庆供电局</strong></p>
                         <p class="ptitle">设备部／助理工程师</p>
                         <p>配网方向运维，年度月度计划安排。</p>
                         <p>gis系统维护，无人机巡视。</p>
                     </div>
-                    <div class="date">
-                        <div></div>
+                    <div class="date col-md-3 col-md-offset-2 col-xs-6">
                         <p>7/2014</p>
                         <p>-</p>
                         <p>7/2017</p>
@@ -262,6 +282,9 @@
             </div>
         </section>
     </div>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="resume.js"></script>
 </body>
 
 </html>
