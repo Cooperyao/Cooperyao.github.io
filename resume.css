@@ -358,10 +358,25 @@ p{
     height: 30px;
     line-height: 30px;
 }
+.ani{
+    height: 100px;
+    overflow: hidden;
+}
+.ani img{
+    width: 100px;
+    -webkit-animation: fly 10s infinite;
+}
+@-webkit-keyframes fly{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: 110%;
+    }   
+}
 .job_box{
     height: 150px;
     width: 100%;
-    margin-top: 100px;
 }
 .job{
     padding-top: 20px;
