@@ -1,5 +1,6 @@
 # resume
 ## 9/20/2017 更新响应式效果
+![](https://github.com/309318267/resume/raw/master/images/响应式效果.jpg)
 ## 9/12/2017
 1.封面轮播动画;    <br>
 2.导航条触发fixed效果;<br>
