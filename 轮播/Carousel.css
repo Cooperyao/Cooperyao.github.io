@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+}
+#main{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+.pic>li{
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left: 200px;
+}
+.pic li img{
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 0;
+    cursor: pointer;
+}
+.active{
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.num{
+    position:absolute;
+    top: 250px;
+    left: 850px;
+    z-index: 999;
+}
+.num li{
+    display: block;
+    float: left;
+    padding:0 10px;
+    text-align: center;
+    background-color: #ff6600;
+    border-right: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+.num li:hover{
+    background-color: white;
+    color: #ff6600;
+}
+#prev{
+    position: absolute;
+    top: 100px;
+    left: 90px;
+    width: 100px;
+    cursor: pointer;
+}
+#next{
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+    width: 100px;
+    cursor: pointer;
+}
+.num li.visited{
+    background-color: white;
+    color: #ff6600;
+}
