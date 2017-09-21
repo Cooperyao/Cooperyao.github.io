@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: white;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.active{
+    background-color: black;
+    color: white;
+}
+
+button{
+    width: 60px;
+    height: 30px;
+    margin: 5px;
+    color: black;
+    cursor: pointer;
+}
+body {
+    background-image: url(bg.jpg);
+}
+
+header{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+h1{
+    margin-top:20px;
+}
+.btn-list{
+    margin: 20px;
+}
+.main {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 40px;
+    overflow: hidden;
+    transition: 2s ease-in-out;
+}
+ /* global */
+.blur0 {
+    position: absolute;
+    width: 300px;
+    height: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    opacity: 1;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.container_left:hover .blur0 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.container_mid:hover .blur0 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.container_right:hover .blur0 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+}
+/*DEMO1 */
+.blur1 {
+    position: absolute;
+    width: 300px;
+    height: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.container_left:hover .blur1 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    transform: rotate(360deg);
+}
+
+.container_mid:hover .blur1 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    transform: rotate(360deg);
+}
+
+.container_right:hover .blur1 {
+    height: 100px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    transform: rotate(360deg);
+}
+/* DEMO2 */
+.blur2 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 2s ease-in-out;
+}
+
+.container_left:hover .blur2 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: jump 1s linear;
+}
+
+.container_mid:hover .blur2 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: jump 1s linear;
+}
+
+.container_right:hover .blur2 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: jump 1s linear;
+}
+@keyframes jump{
+    0%{height: 0;top:0;}
+    50%{height: 50%;top:220px;}
+    100%{height: 30%;top:0;}
+}
+/* DEMO3 */
+.blur3 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in;
+}
+
+.container_left:hover .blur3 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: dum 0.5s linear;
+    transform: rotate(45deg);
+}
+
+.container_mid:hover .blur3 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: dum 0.5s linear;
+    transform: rotate(45deg);
+}
+
+.container_right:hover .blur3 {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    animation: dum 0.5s linear;
+    transform: rotate(45deg);
+}
+@keyframes dum{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(4);
+    }
+    100%{
+        height: 30%;
+        width: 100%;
+    }
+}
