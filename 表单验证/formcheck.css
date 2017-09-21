@@ -1,0 +1,29 @@
+a,h1,h2,h3,h4,h5{
+    color: white;
+}
+.header{
+    height: 70px;
+    width: 80%;
+    background-color: #00b38a;
+}
+.main{
+    width: 80%;
+}
+.content{
+    padding: 2px;
+}
+.nav>li{
+    width: 100px;
+}
+.nav>li>a{
+    color: #00b38a;
+}
+.tab-content .login,
+.tab-content .sign{
+    width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+}
+.replace{
+    display: none;
+}

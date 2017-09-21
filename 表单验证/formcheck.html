@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="formcheck.css">
+</head>
+
+<body>
+    <div class="header container">
+        <h3>登录／注册</h3>
+    </div>
+    <div class="main container">
+        <div class="content">
+
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs text-center">
+                    <li class="active col-md-offset-5">
+                        <a href="#home" data-toggle="tab">登录</a>
+                    </li>
+                    <li>
+                        <a href="#tab" data-toggle="tab">注册</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="login tab-pane active" id="home">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-2 control-label">账号:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入帐号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-2 control-label">密码:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="lastname" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">请记住我
+                                          </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">登录</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sign tab-pane" id="tab">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">通行证帐号:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="zhanghao" placeholder="请输入通行证">
+                                    <span class="replace">6-18位字符(首字符必须是字母)</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">密码:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="mima" placeholder="请输入密码">
+                                    <span class="replace">8-32位字符(区分大小写)</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">确认密码:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="mimab" placeholder="请确认密码">
+                                    <span class="replace">请再次确认你的密码</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">真实姓名:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="turename" placeholder="请输入真实姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">身份证号码:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="idnum" placeholder="请输入身份证号码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">邮箱:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="email" placeholder="请输入邮箱地址">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-md-7">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" checked="checked">我已阅读并同意<span>服务使用协议</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="text-center col-md-offset-2 col-md-7">
+                                    <button type="submit" class="btn btn-default">确认提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../jquery-3.2.1.js"></script>
+    <script src="formcheck.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
