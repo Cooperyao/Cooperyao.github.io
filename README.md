@@ -3,7 +3,8 @@
 <img width="400" height="450" src="https://github.com/309318267/resume/raw/master/images/表单验证2.jpeg"/>
 
 ## 9/20/2017 更新响应式效果
-![](https://github.com/309318267/resume/raw/master/images/响应式效果.jpg)
+<img width="400" height="600" src="https://github.com/309318267/resume/raw/master/images/响应式效果.jpg"/>
+
 ## 9/12/2017
 1.封面轮播动画;    <br>
 2.导航条触发fixed效果;<br>
