@@ -193,6 +193,7 @@ p{
 }
 .bgbox img{ 
     width: 100%;
+    height: 255px;
     -webkit-transition: all 1s ease
 }
 .cover_box{
