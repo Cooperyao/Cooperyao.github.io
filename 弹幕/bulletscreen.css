@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 100%;
+}
+.content {
+  height: 550px;
+  background-color: black;
+  overflow: hidden;
+  border: 1px solid #B9B7B7;
+  padding: 0;
+}
+.content .float {
+  position: absolute;
+  left: 101%;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  font-size: 15px;
+}
+.content .btm-nav {
+  width: 100%;
+  height: 40px;
+  background-color: #272626;
+  position: absolute;
+  top: 510px;
+  opacity: 0;
+  -moz-transition: 0.5s ease-in;
+  /* Firefox 4 */
+  -webkit-transition: 0.5s ease-in;
+  /* Safari 和 Chrome */
+  transition: 0.5s ease-in;
+}
+.content:hover .btm-nav {
+  opacity: 0.8;
+}
+.text {
+  font-size: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px #999;
+  -moz-box-shadow: 0 0 1px #999;
+  box-shadow: 0 0 1px #999;
+  border: 1px solid #B9B7B7;
+  padding: 3px 0;
+}
+.text .input_text {
+  width: 500px;
+  height: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.text .btn {
+  line-height: 25px;
+}
+.sidebar {
+  height: 550px;
+  -webkit-box-shadow: 0 0 1px #999;
+  -moz-box-shadow: 0 0 1px #999;
+  box-shadow: 0 0 1px #999;
+}
+.his {
+  height: 47px;
+  -webkit-box-shadow: 0 0 1px #999;
+  -moz-box-shadow: 0 0 1px #999;
+  box-shadow: 0 0 1px #999;
+}
+.his h5 {
+  margin: 0;
+  line-height: 47px;
+}

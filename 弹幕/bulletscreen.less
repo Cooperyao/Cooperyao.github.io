@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+  }
+  .box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #999) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+            box-shadow: @arguments;
+  }
+.transition(@time){
+    -moz-transition:  @time ease-in; /* Firefox 4 */
+    -webkit-transition:  @time ease-in; /* Safari 和 Chrome */
+    transition: @time ease-in;
+}
+@border: 1px solid #B9B7B7;
+@font-size:15px;
+
+.main{
+    width: 100%;
+}
+.content{
+    height: 550px;
+    background-color: black;
+    overflow: hidden;
+    border: @border;
+    padding: 0;
+    .float{
+        position: absolute;
+        left:101%;
+        width:auto;
+        white-space: nowrap;
+        overflow: hidden;
+        color: white;
+        font-size: @font-size;
+    }
+    .btm-nav{
+        width: 100%;
+        height: 40px;
+        background-color: #272626;
+        position: absolute;
+        top: 510px;
+        opacity: 0;
+        .transition(0.5s);
+    }
+    &:hover .btm-nav{
+        opacity: 0.8;
+    }
+}
+.text{
+    font-size: @font-size;
+    .border-radius(3px);
+    .box-shadow();
+    border: @border;
+    padding: 3px 0;
+    .input_text{
+        width: 500px;
+        height: 35px;
+        .border-radius(5px)
+    }
+    .btn{
+        line-height: 25px;
+    }
+}
+.sidebar{
+    height: 550px;
+    .box-shadow();
+}
+.his{
+    height: 47px;
+    .box-shadow();
+    h5{
+        margin: 0;
+        line-height: 47px;
+    }
+}
