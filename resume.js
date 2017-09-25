@@ -25,7 +25,7 @@ $(function(){
             });
         }else{
             $(".navbar").css({
-                "position":"relative",
+                "position":"static",
             })
         }
         // 导航条触发fixed效果
