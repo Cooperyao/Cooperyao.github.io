@@ -14,11 +14,11 @@ $(function () {
     $(".media a").click(function(){
         var link = $(this).data("src");
         var txt = $(this).text();
-        console.log(txt);
         $(".content").attr("src",link);
         $(".content")[0].play();
         $(this).children(".media-body").addClass("active")
-        .closest(".media").siblings().find(".media-body").removeClass("active");
+               .closest(".media").siblings()
+               .find(".media-body").removeClass("active");
         $(".mtitle small").text(txt);
     })
     //点播视频
