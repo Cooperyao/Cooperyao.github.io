@@ -184,14 +184,16 @@ p{
     background-image: url(images/floor3.jpg);
 }
 .part{
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .part img{
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
+
 .part:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s ease-in-out;
 }
 /* floor3 */
