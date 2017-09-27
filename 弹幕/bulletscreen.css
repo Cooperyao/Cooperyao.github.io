@@ -2,40 +2,37 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: SimHei, "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+}
 .main {
   width: 100%;
 }
-.content {
-  height: 550px;
-  background-color: black;
-  overflow: hidden;
-  border: 1px solid #B9B7B7;
-  padding: 0;
+.nav a.active {
+  color: orange;
+  border-bottom: 2px solid orange;
 }
-.content .float {
+.blur {
+  height: 550px;
+  padding: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+.blur .float {
   position: absolute;
   left: 101%;
   width: auto;
   white-space: nowrap;
   overflow: hidden;
   color: white;
-  font-size: 15px;
+  font-size: 25px;
 }
-.content .btm-nav {
+.content {
   width: 100%;
-  height: 40px;
-  background-color: #272626;
-  position: absolute;
-  top: 510px;
-  opacity: 0;
-  -moz-transition: 0.5s ease-in;
-  /* Firefox 4 */
-  -webkit-transition: 0.5s ease-in;
-  /* Safari 和 Chrome */
-  transition: 0.5s ease-in;
-}
-.content:hover .btm-nav {
-  opacity: 0.8;
+  height: 550px;
+  background-color: black;
+  border: 1px solid #B9B7B7;
+  padding: 0;
 }
 .text {
   font-size: 15px;
@@ -63,6 +60,30 @@
   -webkit-box-shadow: 0 0 1px #999;
   -moz-box-shadow: 0 0 1px #999;
   box-shadow: 0 0 1px #999;
+  overflow: scroll;
+  background-color: #363535;
+  color: white;
+  padding: 0;
+}
+.sidebar .media {
+  margin: 5px;
+}
+.sidebar .media a {
+  color: #D8D8D8;
+  display: block;
+}
+.sidebar .media a:hover {
+  color: white;
+}
+.sidebar .media .active {
+  color: #edab30;
+}
+.sidebar .media-object {
+  width: 100px;
+  margin: 5px;
+}
+.sidebar .media-body {
+  vertical-align: middle;
 }
 .his {
   height: 47px;

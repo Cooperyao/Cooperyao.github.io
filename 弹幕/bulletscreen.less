@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: SimHei,
+                 "Microsoft JhengHei",
+                  Arial, Helvetica, 
+                  sans-serif;
+}
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
        -moz-border-radius: @radius;
@@ -17,18 +23,22 @@
     -webkit-transition:  @time ease-in; /* Safari 和 Chrome */
     transition: @time ease-in;
 }
+
 @border: 1px solid #B9B7B7;
 @font-size:15px;
-
+// 通用
 .main{
     width: 100%;
 }
-.content{
+.nav a.active{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+.blur{
     height: 550px;
-    background-color: black;
-    overflow: hidden;
-    border: @border;
     padding: 0;
+    z-index: 999;
+    overflow: hidden;
     .float{
         position: absolute;
         left:101%;
@@ -36,20 +46,15 @@
         white-space: nowrap;
         overflow: hidden;
         color: white;
-        font-size: @font-size;
+        font-size: 25px;
     }
-    .btm-nav{
-        width: 100%;
-        height: 40px;
-        background-color: #272626;
-        position: absolute;
-        top: 510px;
-        opacity: 0;
-        .transition(0.5s);
-    }
-    &:hover .btm-nav{
-        opacity: 0.8;
-    }
+}
+.content{
+    width: 100%;
+    height: 550px;
+    background-color: black;
+    border: @border;
+    padding: 0;
 }
 .text{
     font-size: @font-size;
@@ -69,6 +74,30 @@
 .sidebar{
     height: 550px;
     .box-shadow();
+    overflow: scroll;
+    background-color: #363535;
+    color: white;
+    padding: 0;
+    .media{
+        margin: 5px;
+        a{
+            color:#D8D8D8;
+            display: block;
+            &:hover{
+                color: white;
+            }
+        }
+        .active{
+            color: rgb(237, 171, 48);
+        }
+    }
+    .media-object{
+        width: 100px;
+        margin: 5px;
+    }
+    .media-body{
+        vertical-align: middle;
+    }
 }
 .his{
     height: 47px;
