@@ -12,6 +12,7 @@ $(function () {
         })
         calculate();
         $("#check-all").prop("checked", flag);
+        insert();
     })
 
     //全选
@@ -23,6 +24,7 @@ $(function () {
             $("tbody>tr").removeClass("on");//是否高亮
         }
         calculate();
+        insert();
     })
 
     //计算       
@@ -32,9 +34,7 @@ $(function () {
         $.each($(".on>.sub"), function (idx, obj) {
             priceTotal += parseFloat($(obj).text())
         });
-        $.each($(".on .num"), function (idx, obj) {
-            selectedTotal += parseFloat($(obj).val());
-        });
+        var selectedTotal = $(".on").length;
         $("#priceTotal span").text(priceTotal.toFixed(2));
         $("#selectedTotal").text(selectedTotal);
     }
@@ -59,6 +59,7 @@ $(function () {
         $tr.find(".num").val(num);
         $tr.find(".sub").text(sub.toFixed(2));
         $(this).siblings(".minus").removeClass("active");
+        calculate();
     })
     $(".minus").click(function () {
         var $tr = $(this).closest("tr");
@@ -73,14 +74,40 @@ $(function () {
         } else {
             $(this).removeClass("active");
         }
+        calculate();
     });
     //单删
-    $("tbody .delete").click(function(){
+    $("tbody .delete").click(function () {
         $(this).closest("tr").remove();
+        insert();
     })
     //多删
-    $("#deleteAll").click(function(){
+    $("#deleteAll").click(function () {
         $(".on").remove();
+        insert();
     })
-
+    //箭头的方向
+    $(".selected").click(function () {
+        $(".selected .glyphicon").each(function () {
+            var dispaly = $(this).css("display");
+            if (dispaly == "block") {
+                $(this).css("display", "none");
+                $(".view").css("display", "none");
+            } else {
+                $(this).css("display", "block");
+                $(".view").css("display", "block");
+            }
+        })
+    })
+    //导购栏的显示内容
+    function insert() {
+        var $img = $("tbody .goods img");
+        $(".view-list").empty();
+        $img.each(function (idx,obj) {
+            var imgSrc = $(this).attr("src");
+            if ($(this).closest("tr").hasClass("on")) {
+                $(".view-list").append("<img src=" + imgSrc + ">");
+            }
+        })
+    }
 })
