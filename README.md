@@ -1,4 +1,28 @@
 # resume
+## 10/13/2017 优化购物车js代码
+```javascript
+$(".selected").click(function () {
+        // $(".selected .glyphicon").each(function () {
+        //     var dispaly = $(this).css("display");
+        //     if (dispaly == "block") {
+        //         $(this).css("display", "none");
+        //         $(".view").css("display", "none");
+        //     } else {
+        //         $(this).css("display", "block");
+        //         $(".view").css("display", "block");
+        //     }
+        // })
+        //优化前
+        
+        $(".selected .glyphicon").each(function () {
+            var display = $(this).css("display");
+            var sta = display == "block" ? "none" : "block";
+                $(this).css("display", sta);
+                $(".view").css("display", sta);
+        })
+        //优化后
+    })
+```
 ## 9/25/2017 更新表单验证demo(validate插件实现)
 <img width="400" height="450" src="https://github.com/309318267/resume/raw/master/images/表单验证2.jpeg"/>
 
