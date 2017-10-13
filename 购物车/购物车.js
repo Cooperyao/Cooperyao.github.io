@@ -88,22 +88,28 @@ $(function () {
     })
     //箭头的方向
     $(".selected").click(function () {
+        // $(".selected .glyphicon").each(function () {
+        //     var dispaly = $(this).css("display");
+        //     if (dispaly == "block") {
+        //         $(this).css("display", "none");
+        //         $(".view").css("display", "none");
+        //     } else {
+        //         $(this).css("display", "block");
+        //         $(".view").css("display", "block");
+        //     }
+        // })
         $(".selected .glyphicon").each(function () {
-            var dispaly = $(this).css("display");
-            if (dispaly == "block") {
-                $(this).css("display", "none");
-                $(".view").css("display", "none");
-            } else {
-                $(this).css("display", "block");
-                $(".view").css("display", "block");
-            }
+            var display = $(this).css("display");
+            var sta = display == "block" ? "none" : "block";
+                $(this).css("display", sta);
+                $(".view").css("display", sta);
         })
     })
     //导购栏的显示内容
     function insert() {
         var $img = $("tbody .goods img");
         $(".view-list").empty();
-        $img.each(function (idx,obj) {
+        $img.each(function (idx, obj) {
             var imgSrc = $(this).attr("src");
             if ($(this).closest("tr").hasClass("on")) {
                 $(".view-list").append("<img src=" + imgSrc + ">");
