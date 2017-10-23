@@ -16,16 +16,16 @@ gulp.task('server', function() {
     }
   });
 
-  gulp.watch('表单验证/*.less', ['less']);
-  watch('表单验证/**/*.html').on('change', reload);
-  watch('表单验证/js/**/*.js').on('change', reload);
+  gulp.watch('购物车/*.less', ['less']);
+  watch('购物车/**/*.html').on('change', reload);
+  watch('购物车/js/**/*.js').on('change', reload);
 
 });
 
 gulp.task('less', function() {
-  gulp.src('表单验证/*.less')
+  gulp.src('购物车/*.less')
     .pipe(less())
-    .pipe(gulp.dest('表单验证'))
+    .pipe(gulp.dest('购物车'))
     .pipe(reload({stream: true}));
 });
 
